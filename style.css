@@ -1,0 +1,141 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 1s ease-in-out;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Backgrounds for weather conditions */
+.sunny {
+    background: linear-gradient(to bottom, #ffeb3b, #f57c00);
+}
+
+.cloudy {
+    background: linear-gradient(to bottom, #e0e0e0, #90a4ae);
+}
+
+.rainy {
+    background: linear-gradient(to bottom, #2196f3, #0d47a1);
+}
+
+.stormy {
+    background: linear-gradient(to bottom, #757575, #212121);
+}
+
+/* Container and Title */
+.container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    backdrop-filter: blur(10px);
+}
+
+.title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Search bar and button */
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#locationInput {
+    padding: 10px;
+    width: 70%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.btn {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+/* Weather Display */
+.weather-display {
+    margin-top: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease-out;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.card-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/* Typography and Animations */
+.initial-text {
+    font-size: 20px;
+    font-style: italic;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    #locationInput {
+        width: 60%;
+    }
+}
